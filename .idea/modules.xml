@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/zz-common/zz-common.iml" filepath="$PROJECT_DIR$/zz-common/zz-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zz-manager/zz-manager.iml" filepath="$PROJECT_DIR$/zz-manager/zz-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zz-manager/zz-manager-dao/zz-manager-dao.iml" filepath="$PROJECT_DIR$/zz-manager/zz-manager-dao/zz-manager-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zz-manager/zz-manager-interface/zz-manager-interface.iml" filepath="$PROJECT_DIR$/zz-manager/zz-manager-interface/zz-manager-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zz-manager/zz-manager-pojo/zz-manager-pojo.iml" filepath="$PROJECT_DIR$/zz-manager/zz-manager-pojo/zz-manager-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zz-manager/zz-manager-service/zz-manager-service.iml" filepath="$PROJECT_DIR$/zz-manager/zz-manager-service/zz-manager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zz-manager/zz-manager-web/zz-manager-web.iml" filepath="$PROJECT_DIR$/zz-manager/zz-manager-web/zz-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zz-parent/zz-parent.iml" filepath="$PROJECT_DIR$/zz-parent/zz-parent.iml" />
+    </modules>
+  </component>
+</project>
