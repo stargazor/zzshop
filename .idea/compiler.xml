@@ -15,14 +15,14 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
-      <module name="zz-common" target="1.7" />
-      <module name="zz-manager" target="1.7" />
-      <module name="zz-manager-dao" target="1.7" />
-      <module name="zz-manager-interface" target="1.7" />
-      <module name="zz-manager-pojo" target="1.7" />
-      <module name="zz-manager-service" target="1.7" />
-      <module name="zz-manager-web" target="1.7" />
-      <module name="zz-parent" target="1.7" />
+      <module name="zz-common" target="1.8" />
+      <module name="zz-manager" target="1.8" />
+      <module name="zz-manager-dao" target="1.8" />
+      <module name="zz-manager-interface" target="1.8" />
+      <module name="zz-manager-pojo" target="1.8" />
+      <module name="zz-manager-service" target="1.8" />
+      <module name="zz-manager-web" target="1.8" />
+      <module name="zz-parent" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
