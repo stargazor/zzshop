@@ -1,7 +1,9 @@
 package com.zsc.zzshop.dao;
 
+import com.zsc.zzshop.common.dto.Order;
 import com.zsc.zzshop.common.dto.Page;
 import com.zsc.zzshop.pojo.vo.TbItemCustom;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -13,5 +15,5 @@ import java.util.List;
  */
 public interface TbItemCustomMapper {
     int countItems();
-    List<TbItemCustom> listItemByPage(Page page);
+    List<TbItemCustom> listItemByPage(@Param("page") Page page,@Param("order") Order order);
 }
