@@ -5,6 +5,7 @@ import com.zsc.zzshop.common.dto.Page;
 import com.zsc.zzshop.common.dto.Result;
 import com.zsc.zzshop.pojo.po.TbItem;
 import com.zsc.zzshop.pojo.vo.TbItemCustom;
+import com.zsc.zzshop.pojo.vo.TbItemQuery;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ import java.util.List;
 public interface ItemService {
     TbItem getById(Long itemId);
 
-    Result<TbItemCustom> getByPage(Page page,Order order);
+    Result<TbItemCustom> getByPage(Page page, Order order, TbItemQuery query);
 
     int removeByIds(List<Long> ids);
 

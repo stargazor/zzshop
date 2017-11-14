@@ -1,5 +1,5 @@
 
-var ddshop = {
+var zzshop = {
 
     registerMenuEvent:function(){
         var $tree = $('#menu .easyui-tree');

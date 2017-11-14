@@ -5,6 +5,7 @@ import com.zsc.zzshop.common.dto.Page;
 import com.zsc.zzshop.common.dto.Result;
 import com.zsc.zzshop.pojo.po.TbItem;
 import com.zsc.zzshop.pojo.vo.TbItemCustom;
+import com.zsc.zzshop.pojo.vo.TbItemQuery;
 import com.zsc.zzshop.service.ItemService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,10 +39,10 @@ public class ItemAction {
     }
     @RequestMapping("/items")
     @ResponseBody
-    public Result<TbItemCustom> listItemByPage(Page page,Order order){
+    public Result<TbItemCustom> listItemByPage(Page page, Order order, TbItemQuery query){
         Result<TbItemCustom> list=null;
         try {
-            list=itemService.getByPage(page,order);
+            list=itemService.getByPage(page,order,query);
         }catch (Exception e){
             logger.error(e.getMessage(),e);
             e.printStackTrace();

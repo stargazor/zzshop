@@ -8,6 +8,7 @@ import com.zsc.zzshop.dao.TbItemMapper;
 import com.zsc.zzshop.pojo.po.TbItem;
 import com.zsc.zzshop.pojo.po.TbItemExample;
 import com.zsc.zzshop.pojo.vo.TbItemCustom;
+import com.zsc.zzshop.pojo.vo.TbItemQuery;
 import com.zsc.zzshop.service.ItemService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,13 +36,13 @@ public class ItemServiceImpl implements ItemService{
     }
 
     @Override
-    public Result<TbItemCustom> getByPage(Page page,Order order) {
+    public Result<TbItemCustom> getByPage(Page page, Order order, TbItemQuery query) {
         Result<TbItemCustom> result=null;
         try {
             result=new Result<TbItemCustom>();
-            int countItems = itemCustomDao.countItems();
+            int countItems = itemCustomDao.countItems(query);
             result.setTotal(countItems);
-            List<TbItemCustom> list = itemCustomDao.listItemByPage(page,order);
+            List<TbItemCustom> list = itemCustomDao.listItemByPage(page,order,query);
             result.setRows(list);
         }catch (Exception e){
             logger.error(e.getMessage(),e);

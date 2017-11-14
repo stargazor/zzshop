@@ -1,5 +1,8 @@
 package com.zsc.zzshop.common.dto;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * User: Administrator
  * Date: 2017/11/11
@@ -9,6 +12,16 @@ package com.zsc.zzshop.common.dto;
 public class Order {
     private String sort;
     private String order;
+    public List<String> getOrderParam(){
+        String[] sorts=this.sort.split(",");
+        String[] orders=this.order.split(",");
+        List<String> list=new ArrayList<String>();
+        for (int i=0;i<sorts.length;i++){
+            String orderParam = "(i."+sorts[i]+" USING gbk) "+orders[i];
+            list.add(orderParam);
+        }
+        return list;
+    }
 
     public String getSort() {
         return sort;
