@@ -25,7 +25,7 @@
 <table id="tb"></table>
 <script>
     function add() {
-        alert('编辑按钮');
+        zzshop.addTab('新增商品','item-add');
     }
     function edit() {
         alert('编辑按钮');
@@ -223,3 +223,6 @@
         ]]
     });
 </script>
+function(data){
+    data
+}

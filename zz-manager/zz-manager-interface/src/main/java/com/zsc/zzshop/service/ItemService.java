@@ -4,6 +4,7 @@ import com.zsc.zzshop.common.dto.Order;
 import com.zsc.zzshop.common.dto.Page;
 import com.zsc.zzshop.common.dto.Result;
 import com.zsc.zzshop.pojo.po.TbItem;
+import com.zsc.zzshop.pojo.po.TbItemDesc;
 import com.zsc.zzshop.pojo.vo.TbItemCustom;
 import com.zsc.zzshop.pojo.vo.TbItemQuery;
 
@@ -25,4 +26,6 @@ public interface ItemService {
     int upByIds(List<Long> ids);
 
     int downByIds(List<Long> ids);
+
+    int saveItem(TbItem tbItem, TbItemDesc tbItemDesc);
 }

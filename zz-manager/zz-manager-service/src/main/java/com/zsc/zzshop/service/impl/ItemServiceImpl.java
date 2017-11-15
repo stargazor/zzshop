@@ -3,9 +3,12 @@ package com.zsc.zzshop.service.impl;
 import com.zsc.zzshop.common.dto.Order;
 import com.zsc.zzshop.common.dto.Page;
 import com.zsc.zzshop.common.dto.Result;
+import com.zsc.zzshop.common.util.IdUtils;
 import com.zsc.zzshop.dao.TbItemCustomMapper;
+import com.zsc.zzshop.dao.TbItemDescMapper;
 import com.zsc.zzshop.dao.TbItemMapper;
 import com.zsc.zzshop.pojo.po.TbItem;
+import com.zsc.zzshop.pojo.po.TbItemDesc;
 import com.zsc.zzshop.pojo.po.TbItemExample;
 import com.zsc.zzshop.pojo.vo.TbItemCustom;
 import com.zsc.zzshop.pojo.vo.TbItemQuery;
@@ -14,7 +17,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -30,6 +35,8 @@ public class ItemServiceImpl implements ItemService{
     private TbItemMapper itemDao;
     @Autowired
     private TbItemCustomMapper itemCustomDao;
+    @Autowired
+    private TbItemDescMapper itemDescDao;
     @Override
     public TbItem getById(Long itemId) {
         return itemDao.selectByPrimaryKey(itemId);
@@ -61,6 +68,29 @@ public class ItemServiceImpl implements ItemService{
             TbItem record=new TbItem();
             record.setStatus((byte) 2);
             i = itemDao.updateByExampleSelective(record, example);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return i;
+    }
+
+    @Transactional
+    @Override
+    public int saveItem(TbItem tbItem, TbItemDesc tbItemDesc) {
+        int i=0;
+        try {
+            Long id= IdUtils.genItemId();
+            tbItem.setId(id);
+            tbItem.setStatus((byte) 1);
+            tbItem.setCreated(new Date());
+            tbItem.setUpdated(new Date());
+            i=itemDao.insert(tbItem);
+
+            tbItemDesc.setItemId(id);
+            tbItemDesc.setCreated(new Date());
+            tbItemDesc.setUpdated(new Date());
+            i+=itemDescDao.insert(tbItemDesc);
         }catch (Exception e){
             logger.error(e.getMessage(),e);
             e.printStackTrace();

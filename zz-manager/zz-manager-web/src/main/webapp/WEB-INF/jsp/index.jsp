@@ -41,7 +41,7 @@
 </div>
 <div data-options="region:'center'" style="background:#eee;">
     <div id="tab" class="easyui-tabs" data-options="fit:true">
-        <div title="欢迎页面" style="padding:20px;">千锋欢迎你</div>
+        <div title="欢迎页面" style="padding:20px;">欢迎页面</div>
     </div>
 </div>
 <!-- jquery -->
@@ -57,6 +57,12 @@
 <!-- 自定义脚本 -->
 <script src="js/common.js"></script>
 <!-- 自定义js -->
+
+<!-- 百度富文本编辑器 -->
+<!-- 配置文件 -->
+<script src="js/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script src="js/ueditor/ueditor.all.js"></script>
 <script>
     zzshop.registerMenuEvent();
 //    $(function () {

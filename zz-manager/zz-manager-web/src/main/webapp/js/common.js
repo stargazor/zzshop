@@ -3,6 +3,7 @@ var zzshop = {
 
     registerMenuEvent:function(){
         var $tree = $('#menu .easyui-tree');
+        var _this=this;
         //将当前树打印到控制台
         //console.log($tree);
         $tree.tree({
@@ -10,13 +11,21 @@ var zzshop = {
                 var href = node.attributes.href;//item-add
                 var text = node.text;
 //                debugger;
-                $('#tab').tabs('add',{
-                    title: text,
-                    href: href,
-                    closable:true
-                });
+                _this.addTab(text,href);
             }
         });
+    },
+
+    addTab:function(title,href){
+        if($("#tab").tabs('exists',title)){
+            $("#tab").tabs('select',title);
+        }else {
+            $('#tab').tabs('add',{
+                title: title,
+                href: href,
+                closable:true
+            });
+        }
     }
 
 };

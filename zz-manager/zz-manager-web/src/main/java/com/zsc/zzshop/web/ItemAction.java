@@ -4,6 +4,7 @@ import com.zsc.zzshop.common.dto.Order;
 import com.zsc.zzshop.common.dto.Page;
 import com.zsc.zzshop.common.dto.Result;
 import com.zsc.zzshop.pojo.po.TbItem;
+import com.zsc.zzshop.pojo.po.TbItemDesc;
 import com.zsc.zzshop.pojo.vo.TbItemCustom;
 import com.zsc.zzshop.pojo.vo.TbItemQuery;
 import com.zsc.zzshop.service.ItemService;
@@ -82,6 +83,19 @@ public class ItemAction {
         int i=0;
         try {
             i=itemService.downByIds(ids);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return i;
+    }
+
+    @RequestMapping(value = "/item",method = RequestMethod.POST)
+    @ResponseBody
+    public Integer addItem(TbItem tbItem, TbItemDesc tbItemDesc){
+        int i=0;
+        try {
+            i=itemService.saveItem(tbItem,tbItemDesc);
         }catch (Exception e){
             logger.error(e.getMessage(),e);
             e.printStackTrace();
