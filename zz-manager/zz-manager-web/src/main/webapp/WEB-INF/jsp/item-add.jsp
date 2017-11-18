@@ -105,7 +105,8 @@
     //实例化编辑器
     var ue = UE.getEditor('container',{
         initialFrameWidth: '100%',
-        initialFrameHeight: '400'
+        initialFrameHeight: '200',
+        serverUrl:'file/upload'
     });
     //加载商品类目的树形下拉框
     $('#cid').combotree({

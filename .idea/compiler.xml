@@ -12,6 +12,7 @@
         <module name="zz-manager-pojo" />
         <module name="zz-manager-service" />
         <module name="zz-manager-web" />
+        <module name="zz-upload" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
@@ -23,6 +24,7 @@
       <module name="zz-manager-service" target="1.8" />
       <module name="zz-manager-web" target="1.8" />
       <module name="zz-parent" target="1.8" />
+      <module name="zz-upload" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -10,6 +10,7 @@
     <modules>
         <module>../zz-common</module>
         <module>../zz-manager</module>
+        <module>../zz-upload</module>
     </modules>
     <packaging>pom</packaging>
 

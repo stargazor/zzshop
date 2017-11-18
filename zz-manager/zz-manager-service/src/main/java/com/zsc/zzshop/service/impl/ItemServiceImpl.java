@@ -3,7 +3,7 @@ package com.zsc.zzshop.service.impl;
 import com.zsc.zzshop.common.dto.Order;
 import com.zsc.zzshop.common.dto.Page;
 import com.zsc.zzshop.common.dto.Result;
-import com.zsc.zzshop.common.util.IdUtils;
+import com.zsc.zzshop.common.util.IDUtils;
 import com.zsc.zzshop.dao.TbItemCustomMapper;
 import com.zsc.zzshop.dao.TbItemDescMapper;
 import com.zsc.zzshop.dao.TbItemMapper;
@@ -80,7 +80,7 @@ public class ItemServiceImpl implements ItemService{
     public int saveItem(TbItem tbItem, TbItemDesc tbItemDesc) {
         int i=0;
         try {
-            Long id= IdUtils.genItemId();
+            Long id= IDUtils.getItemId();
             tbItem.setId(id);
             tbItem.setStatus((byte) 1);
             tbItem.setCreated(new Date());

@@ -223,6 +223,3 @@
         ]]
     });
 </script>
-function(data){
-    data
-}

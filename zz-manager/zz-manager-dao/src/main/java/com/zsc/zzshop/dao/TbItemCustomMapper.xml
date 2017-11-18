@@ -3,7 +3,8 @@
 <mapper namespace="com.zsc.zzshop.dao.TbItemCustomMapper" >
 
   <sql id="Base_Column_List" >
-    i.id, i.title, i.sell_point AS sellPoint, FORMAT(i.price/100,2) AS priceView, i.num, i.barcode, i.image, i.cid, DATE_FORMAT(i.created,'%Y-%m-%d') as createdString, i.updated, c.name AS catName,
+    i.id, i.title, i.sell_point AS sellPoint, FORMAT(i.price/100,2) AS priceView, i.num, i.barcode, i.image, i.cid,
+    DATE_FORMAT(i.created,'%Y-%m-%d') as createdString, i.updated, c.name AS catName,
     CASE i.status
       WHEN 1 THEN "正常"
       WHEN 2 THEN "下架"
