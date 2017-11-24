@@ -25,7 +25,7 @@ public class TbContent {
 
     private String content;
 
-    public TbContent(Long id, Long categoryId, String title, String subTitle, String titleDesc, String url, String pic, String pic2, Date created, Date updated, String content) {
+    public TbContent(Long id, Long categoryId, String title, String subTitle, String titleDesc, String url, String pic, String pic2,String content, Date created, Date updated ) {
         this.id = id;
         this.categoryId = categoryId;
         this.title = title;
@@ -35,6 +35,19 @@ public class TbContent {
         this.pic = pic;
         this.pic2 = pic2;
         this.created = created;
+        this.updated = updated;
+        this.content = content;
+    }
+    public TbContent(Long id, Long categoryId, String title, String subTitle, String titleDesc, String url, String pic, String pic2, Date created, Date updated ) {
+        this.id = id;
+        this.categoryId = categoryId;
+        this.title = title;
+        this.subTitle = subTitle;
+        this.titleDesc = titleDesc;
+        this.url = url;
+        this.pic = pic;
+        this.pic2 = pic2;
+
         this.updated = updated;
         this.content = content;
     }

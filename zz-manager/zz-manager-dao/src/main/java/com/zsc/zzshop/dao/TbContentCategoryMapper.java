@@ -2,9 +2,8 @@ package com.zsc.zzshop.dao;
 
 import com.zsc.zzshop.pojo.po.TbContentCategory;
 import com.zsc.zzshop.pojo.po.TbContentCategoryExample;
-import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 public interface TbContentCategoryMapper {
     int countByExample(TbContentCategoryExample example);
