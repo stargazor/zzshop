@@ -101,7 +101,8 @@
             }
         });
     }
-
+    //初始化之前删除原有的容器
+    UE.delEditor('container');
     //实例化编辑器
     var ue = UE.getEditor('container',{
         initialFrameWidth: '100%',
